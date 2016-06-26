@@ -6,3 +6,5 @@ C:\MyDocuments\Projects\Belka\SignalProcessing\obj\Debug\SignalProcessing.exe
 C:\MyDocuments\Projects\Belka\SignalProcessing\obj\Debug\SignalProcessing.pdb
 C:\MyDocuments\Projects\Belka\SignalProcessing\bin\Debug\Newtonsoft.Json.dll
 C:\MyDocuments\Projects\Belka\SignalProcessing\bin\Debug\Newtonsoft.Json.xml
+C:\MyDocuments\Projects\Belka\SignalProcessing\bin\Debug\NAudio.dll
+C:\MyDocuments\Projects\Belka\SignalProcessing\bin\Debug\NAudio.xml
