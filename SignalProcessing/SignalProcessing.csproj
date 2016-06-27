@@ -61,6 +61,8 @@
     <Compile Include="SoundProcessing\EffectStream.cs" />
     <Compile Include="SoundProcessing\SineWaveProvider32.cs" />
     <Compile Include="SoundProcessing\Slider.cs" />
+    <Compile Include="SoundProcessing\SuperPitch .cs" />
+    <Compile Include="SoundProcessing\Tremolo.cs" />
     <Compile Include="SoundProcessing\WaveProvider32.cs" />
     <Compile Include="SoundProcessing\WavPlayer.cs" />
     <Compile Include="UDPListener.cs" />

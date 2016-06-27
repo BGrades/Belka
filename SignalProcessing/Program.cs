@@ -11,9 +11,9 @@ using SignalProcessing.SoundProcessing;
 
 namespace SignalProcessing
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             UDPListener _udpListener = new UDPListener(8888);
             Thread thread = new Thread(_udpListener.StartListener);
@@ -29,9 +29,37 @@ namespace SignalProcessing
 
             WavPlayer wav = new WavPlayer();
             wav.Play("../../resources/pampampam.wav");
-            
+
             UDPSender _udpSender = new UDPSender("127.0.0.1", 20381, 8888);
             _udpSender.ContiniousRandomDataSend();
         }
+
+        //private static int ChooseSong(DataSeries data)
+        //{
+        //    double result = 0;
+        //    double maxRation = 0;
+
+        //    foreach (var val in data.Ratio)
+        //    {
+        //        if (val > maxRation)
+        //            maxRation = val;
+        //    }
+
+        //    double[] normRatios = new double[4];
+        //    int i = 0;
+
+        //    foreach (var val in data.Ratio)
+        //    {
+        //        normRatios[i] = val/maxRation;
+        //        i++;
+        //    }
+
+        //    foreach (var val in normRatios)
+        //    {
+        //        result += val*2;
+        //    }
+
+        //    return (int)result;
+        //}
     }
 }

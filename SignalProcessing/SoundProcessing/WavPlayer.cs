@@ -12,8 +12,13 @@ namespace SignalProcessing.SoundProcessing
     {
         public void Play(string filanme)
         {
+            var effectChain = new EffectChain();
+            effectChain.Add(new SuperPitch());
+            //effectChain.Add(new Tremolo());
+
             using (var wfr = new WaveFileReader(filanme))
-            using (WaveChannel32 wc = new WaveChannel32(wfr) { PadWithZeroes = false })
+            using (var effectStream = new EffectStream(effectChain, wfr))
+            using (WaveChannel32 wc = new WaveChannel32(effectStream) { PadWithZeroes = false })
             using (var audioOutput = new DirectSoundOut())
             {
                 audioOutput.Init(wc);
